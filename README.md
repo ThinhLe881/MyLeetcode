@@ -13,6 +13,7 @@
 |  |
 | ------- |
 | [0049-group-anagrams](https://github.com/ThinhLe881/https-github.com-ThinhLe881-Leetcode/tree/master/0049-group-anagrams) |
+| [0125-valid-palindrome](https://github.com/ThinhLe881/https-github.com-ThinhLe881-Leetcode/tree/master/0125-valid-palindrome) |
 | [0242-valid-anagram](https://github.com/ThinhLe881/https-github.com-ThinhLe881-Leetcode/tree/master/0242-valid-anagram) |
 ## Sorting
 |  |
@@ -26,4 +27,8 @@
 | [0001-two-sum](https://github.com/ThinhLe881/https-github.com-ThinhLe881-Leetcode/tree/master/0001-two-sum) |
 | [0049-group-anagrams](https://github.com/ThinhLe881/https-github.com-ThinhLe881-Leetcode/tree/master/0049-group-anagrams) |
 | [0217-contains-duplicate](https://github.com/ThinhLe881/https-github.com-ThinhLe881-Leetcode/tree/master/0217-contains-duplicate) |
+## Two Pointers
+|  |
+| ------- |
+| [0125-valid-palindrome](https://github.com/ThinhLe881/https-github.com-ThinhLe881-Leetcode/tree/master/0125-valid-palindrome) |
 <!---LeetCode Topics End-->
