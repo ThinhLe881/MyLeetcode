@@ -7,15 +7,14 @@ public:
             int sum = numbers[start] + numbers[end];
 
             if (sum == target) {
-                return {start+1, end+1};
+                return {start + 1, end + 1};
             }
 
             if (sum > target) {
                 end--;
-                continue;
+            } else {
+                start++;
             }
-
-            start++;
         }
 
         return {};
