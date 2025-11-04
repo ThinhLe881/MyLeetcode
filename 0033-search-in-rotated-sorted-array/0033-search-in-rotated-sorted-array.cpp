@@ -9,7 +9,7 @@ public:
             if (nums[mid] == target) {
                 return mid;
             }
-            
+
             if (nums[left] <= nums[mid]) {
                 // left half is sorted
                 if (nums[left] <= target && target <= nums[mid]) {
@@ -18,6 +18,7 @@ public:
                     left = mid + 1;
                 }
             } else {
+                // right half is sorted
                 if (nums[mid] <= target && target <= nums[right]) {
                     left = mid + 1;
                 } else {
