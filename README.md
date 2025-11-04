@@ -27,6 +27,7 @@
 | ------- |
 | [0001-two-sum](https://github.com/ThinhLe881/https-github.com-ThinhLe881-Leetcode/tree/master/0001-two-sum) |
 | [0011-container-with-most-water](https://github.com/ThinhLe881/https-github.com-ThinhLe881-Leetcode/tree/master/0011-container-with-most-water) |
+| [0033-search-in-rotated-sorted-array](https://github.com/ThinhLe881/https-github.com-ThinhLe881-Leetcode/tree/master/0033-search-in-rotated-sorted-array) |
 | [0049-group-anagrams](https://github.com/ThinhLe881/https-github.com-ThinhLe881-Leetcode/tree/master/0049-group-anagrams) |
 | [0074-search-a-2d-matrix](https://github.com/ThinhLe881/https-github.com-ThinhLe881-Leetcode/tree/master/0074-search-a-2d-matrix) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/ThinhLe881/https-github.com-ThinhLe881-Leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
@@ -43,6 +44,7 @@
 ## Binary Search
 |  |
 | ------- |
+| [0033-search-in-rotated-sorted-array](https://github.com/ThinhLe881/https-github.com-ThinhLe881-Leetcode/tree/master/0033-search-in-rotated-sorted-array) |
 | [0074-search-a-2d-matrix](https://github.com/ThinhLe881/https-github.com-ThinhLe881-Leetcode/tree/master/0074-search-a-2d-matrix) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/ThinhLe881/https-github.com-ThinhLe881-Leetcode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/ThinhLe881/https-github.com-ThinhLe881-Leetcode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
