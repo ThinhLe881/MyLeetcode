@@ -1,73 +1,55 @@
 class Robot {
-    int x; 
-    int y;
-    int width; 
-    int height; 
-    string dir;
+    int x, y;
+    int w, h; 
+    int dir;
+    int tot; // total perimeter steps
 
 public:
     Robot(int width, int height) {
-        x = 0, y = 0, dir = "East";
-        this->width = width, this->height = height;
+        x = 0, y = 0, dir = 1;
+        w = width, h = height;
+        tot = 2 * w;
+        tot += 2 * (h - 2);
     }
     
     void step(int num) {
-        num %= (2 * (width - 1) + 2 * (height - 1));
-        if (num == 0) {
-            num = (2 * (width - 1) + 2 * (height - 1));
-        }
+        if(num % tot == 0 && x == 0 && y == 0)
+            dir = 2;
 
-        while(num > 0) {
-            int nx = x, ny = y; 
-            
-            if(dir == "East") {
-                int maxX = min(x + num, width - 1); 
-                int rem = num - (maxX - x); 
-                num = rem;
+        // reduce unnecessary full cycles
+        num %= tot;
 
-                if (rem == 0) {
-                    x = maxX, y = ny; 
-                } else {
-                    x = maxX; 
-                    dir = "North"; 
-                }
+        while(num) {
+            // EAST
+            if (dir == 1) {
+                int step = w - x - 1;
+                step = min(step, num);
+                x += step;
+                num -= step;
             }
-            else if (dir == "West") {
-                int minX = max(x - num, 0); 
-                int rem = num - (x - minX); 
-                num = rem;
-
-                if (rem == 0) {
-                    x = minX, y = ny; 
-                } else {
-                    x = minX; 
-                    dir = "South"; 
-                }
+            // NORTH
+            else if (dir == 0) {
+                int step = h - 1 - y;
+                step = min(step, num);
+                y += step;
+                num -= step;
             }
-            else if (dir == "North") {
-                int maxY = min(y + num, height - 1); 
-                int rem = num - (maxY - y); 
-                num = rem;
-
-                if (rem == 0) {
-                    x = nx, y = maxY; 
-                } else {
-                    y = maxY; 
-                    dir = "West"; 
-                }
+            // WEST
+            else if (dir == 3) {
+                int step = min(x, num);
+                x -= step;
+                num -= step;
             }
-            else if (dir == "South") {
-                int minY = max(y - num, 0); 
-                int rem = num - (y - minY); 
-                num = rem; 
-
-                if (rem == 0) {
-                    x = nx, y = minY; 
-                } else {
-                    y = minY; 
-                    dir = "East"; 
-                }
+            // SOUTH
+            else if (dir == 2) {
+                int step = min(y, num);
+                y -= step;
+                num -= step;
             }
+
+            // turn counterclockwise if movement remains
+            if(num)
+                dir = (dir - 1 + 4) % 4;
         }
     }
     
@@ -76,7 +58,10 @@ public:
     }
     
     string getDir() {
-        return dir;
+        if(dir == 1) return "East";
+        if(dir == 0) return "North";
+        if(dir == 3) return "West";
+        return "South";
     }
 };
 
